@@ -1,0 +1,14 @@
+{
+    "id": 123456,
+    "nombres": "yolanda",
+    "apellidos": "rivera",
+    "telefono": "2601083",
+    "direccion": "El poblado",
+    "ciudad": "Medellin",
+    "estado": "Antioquia",
+    "pais": "Colombia",
+    "password": "123456",
+    "fechaNacimiento": "13011989",
+    "sexo": "M",
+    "fechaHoraCreacion": "13022019"
+}
