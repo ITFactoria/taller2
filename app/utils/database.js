@@ -2,7 +2,7 @@
 //SQLite Client Config
 const sqlite3 = require('sqlite3').verbose();
 const sqliteClient = new sqlite3.Database('./db/db.sqlite');
-const db = new sqlite3.Database('./db/db.sqlite');
+//const db = new sqlite3.Database('./db/db.sqlite');
 
 //MongoDB Client Config
 const mongodbClient = require('mongodb').MongoClient;
@@ -12,9 +12,8 @@ const databaseConfig ={
     "sqlite" : sqliteClient,
     "mongodb" : mongodbClient,
     "mongodb_url": url,
-    "default" : 'sqlite'
+    "default" : 'mongodb'
 }
 
-console.log("database.js: ", databaseConfig.default)
-//module.exports = databaseConfig
-module.exports = db
+module.exports = databaseConfig
+//module.exports = db
