@@ -27,6 +27,12 @@
             break;
 
         }
+        case 'firestore': {
+            console.log("firestore model");
+            model = require('../models/firestore-model')(databaseConfig.firestore);
+            break;
+
+        }
         default: {
             console.log("default model");
             model = require('../models/sqlite-model')(databaseConfig.sqlite);

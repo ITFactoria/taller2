@@ -8,6 +8,18 @@ const bodyParser = require('body-parser');
 //const sqlite3 = require('sqlite3').verbose();
 //let db = new sqlite3.Database('./db/db.sqlite');
 
+//Firebase config
+/*const admin = require("firebase-admin");
+const serviceAccount = require("./app/private/key.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://drteddy-cf0a5.firebaseio.com"
+});
+
+const firestore = admin.firestore();*/
+
+
 var controllerPacientes = require('./app/controllers/pacientes');
 var controllerCitas = require('./app/controllers/citas');
 
