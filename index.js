@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
+var jwt = require('jsonwebtoken'); 
 
 
 //const sqlite3 = require('sqlite3').verbose();
@@ -22,12 +23,16 @@ const firestore = admin.firestore();*/
 
 var controllerPacientes = require('./app/controllers/pacientes');
 var controllerCitas = require('./app/controllers/citas');
+var controllerLogin = require('./app/controllers/login');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
 app.use('/pacientes', controllerPacientes);
 app.use('/citas', controllerCitas);
+app.use('/login', controllerLogin);
+
 
 
 //app.get('/hello', (req, res) => res.send('Hello World!'))
